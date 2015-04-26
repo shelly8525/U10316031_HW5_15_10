@@ -2,7 +2,18 @@ import java.util.ArrayList;
 
 public class MyStack implements Cloneable{
 	public static void main(String[] args){
+		MyStack stack = new MyStack();
+		stack.push("S");
+		stack.push("S1");
+		stack.push("S2");
 		
+		MyStack stack1 = (MyStack)stack.clone();
+		stack1.push("S");
+		stack1.push("S1");
+		stack1.push("S2");
+		
+		System.out.println(stack.getSize());
+		System.out.println(stack1.getSize());
 	} 
 	private ArrayList<Object> list = new ArrayList<Object>();
 	
